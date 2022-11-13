@@ -1,0 +1,179 @@
+/* Element decalartion */
+h1 {
+    color: green;
+}
+/* Class inside tag decalartion */
+.pizza h1{
+    color: violet;
+}
+/* Element, element */
+/*div p {
+    color: blue;
+}*/
+
+.pizza ul {
+    color: darkblue;
+    text-align: center;
+    direction: rtl;
+    visibility: visible;
+}
+/* Class decalartion */
+.common-green {
+    background-color: lightpink;
+}
+
+.another {
+    border: 2px solid red;
+}
+/* ID decalartion */
+#one-id {
+    color: lightcyan;
+}
+
+a {
+    text-decoration: underline;
+    text-transform: capitalize;
+    /* underline, none, line-throght(stike through) */
+}
+
+.label-new {
+    color: darkorange;
+}
+
+.parent {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background-color: blanchedalmond;
+}
+.child1 {
+    position: absolute;
+    top: 15px;
+    height: 50px;
+    width: 50px;
+    background-color: rgb(75, 205, 145);
+}
+.child2 {
+    position: relative;
+    height: 50px;
+    width: 50px;
+    background-color: rgb(57, 155, 202);
+    /*margin: 50px;*/
+    top: 15px;
+    left: 50px;
+}
+.child3 {
+    position: fixed;
+    height: 50px;
+    width: 50px;
+    bottom: 15px;
+    left: 10px;
+    background-color: rgb(199, 127, 47);
+    border-radius: 10px;
+}
+/* we can also use @media print */
+/* greater than or equal to */
+/*@media screen and (min-width: 500px) {
+    body {
+        color: rgb(133, 235, 181);
+    }
+}*/
+/* greater than 500 it is changed to purple - lesser than 500 */
+@media screen and (max-width: 500px) {
+    body {
+        color: rgb(77, 2, 95);
+    }
+}
+/* between 500 to 700 it should be green */
+@media screen and (min-width: 500px) and (max-width: 700px) {
+    body {
+        color: rgb(37, 240, 18);
+    }
+}
+
+/* Attribute Selector */
+a {
+    color: red;
+}
+/* We can give attribute name and value with class */
+.class[name="super"]{
+   color: yellow; 
+}
+/* We can give attribute value alone */
+[name="super"]{
+    color: orange; 
+}
+
+[data-color="green"]{
+    color:rgb(28, 25, 202)
+}
+/* Attribute Selector with more specific value */
+a[name="super1"]{
+    color:rgb(37, 240, 18)
+}
+
+/*a[href="http://www.google.com"]{
+    color:brown;
+}*/
+
+/* Contains(*) Selector */
+/* <a href="http://www.google.com">Google</a> */
+a[href*="google"]{
+    color:orangered;
+}
+/* or we can give below format also
+a[href*="com"]{
+    color:orangered;
+}*/
+
+/* $ dollor Symbol Selector for end element */
+a[href$="in"]{
+    color: rgb(4, 33, 131);
+}
+
+/* ^ cap Symbol Selector for start element */
+a[href^="http"]{
+    color: rgb(233, 31, 108);
+}
+
+/* :nth-of-type Selector - Here the tag is 11 */
+/* This will affect the all entire body */
+a:nth-of-type(11){
+    color: rgb(32, 204, 9);
+}
+
+/* Parent - Child selector method */
+div p:nth-of-type(2){
+    color: rgb(206, 9, 180);
+}
+/*or*/
+div a:nth-of-type(3){
+    color: rgb(206, 9, 180);
+}
+/* this is for first occured element */
+#excellent p span{
+    color: rebeccapurple
+}
+
+#excellent .anything span{
+    color: rgb(233, 31, 108)
+}
+/* or
+div[id="excellent"] .anything span{
+    color: rgb(233, 31, 108)
+}*/
+/* if the same class found in the para then we can use below one */
+#excellent p span:nth-of-type(2){
+    color: yellowgreen
+}
+/* if it is different classname means we can use below one */
+#excellent p span[for="popularname"]{
+    color: yellowgreen
+}
+
+
+
+
+
+
+
